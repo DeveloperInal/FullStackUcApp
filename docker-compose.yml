@@ -2,10 +2,14 @@ networks:
   dev:
 
 services:
-  db:
-    image: postgres:stable-alpine-3.20-slim
+  pg:
+    image: postgres
     environment:
-      -
+      POSTGRES_DB: tgapp
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: inal_2411
+    ports:
+      - "5432:5432"
 
   nginx:
     image: nginx:stable-alpine
