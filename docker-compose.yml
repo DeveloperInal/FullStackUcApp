@@ -3,7 +3,7 @@ networks:
 
 services:
   pg:
-    image: postgres
+    image: postgres:stable-alpine
     environment:
       POSTGRES_DB: tgapp
       POSTGRES_USER: postgres
