@@ -3,7 +3,7 @@ networks:
 
 services:
   pg:
-    image: postgres:stable-alpine
+    image: postgres:latest
     environment:
       POSTGRES_DB: tgapp
       POSTGRES_USER: postgres
@@ -12,7 +12,7 @@ services:
       - "5432:5432"
 
   nginx:
-    image: nginx:stable-alpine
+    image: nginx:latest
     ports:
       - "443:443"
     volumes:
